@@ -9,6 +9,7 @@ public class Paciente {
     private Double imc;
 
     public void calcularIMC() {
+
         if (peso != null && altura != null && altura > 0) {
             this.imc = peso / (altura * altura);
         }
