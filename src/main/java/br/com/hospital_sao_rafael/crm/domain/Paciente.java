@@ -1,5 +1,8 @@
 package br.com.hospital_sao_rafael.crm.domain;
 
+import lombok.Data;
+
+@Data
 public class Paciente {
 
     private Long id;
@@ -9,11 +12,8 @@ public class Paciente {
     private Double imc;
 
     public void calcularIMC() {
-
         if (peso != null && altura != null && altura > 0) {
             this.imc = peso / (altura * altura);
         }
     }
-
-    // getters e setters
 }
