@@ -38,6 +38,10 @@ public class AgendamentoService {
             throw new ValidationException("Médico é obrigatório");
         }
 
+        if (a.getStatus() == null) {
+            a.setStatus("AGENDADO");
+        }
+
         repository.save(a);
     }
 

@@ -9,6 +9,7 @@ public class Agendamento {
     private Long medicoId;
     private Long procedimentoId;
     private LocalDateTime dataHora;
+    private String status; // 🔥 FALTAVA ISSO
 
     public Agendamento() {}
 
@@ -26,4 +27,7 @@ public class Agendamento {
 
     public LocalDateTime getDataHora() { return dataHora; }
     public void setDataHora(LocalDateTime dataHora) { this.dataHora = dataHora; }
+
+    public String getStatus() { return status; } // 🔥
+    public void setStatus(String status) { this.status = status; } // 🔥
 }

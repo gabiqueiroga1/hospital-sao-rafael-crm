@@ -19,22 +19,29 @@ public class AgendamentoRepository {
 
     private RowMapper<Agendamento> rowMapper = (rs, rowNum) -> {
         Agendamento a = new Agendamento();
-        a.setId(rs.getLong("id"));
-        a.setPacienteId(rs.getLong("paciente_id"));
-        a.setMedicoId(rs.getLong("medico_id"));
-        a.setProcedimentoId(rs.getLong("procedimento_id"));
-        a.setDataHora(rs.getTimestamp("data_hora").toLocalDateTime());
+        a.setId(rs.getLong("ID_AGENDAMENTO"));
+        a.setPacienteId(rs.getLong("ID_PACIENTE"));
+        a.setMedicoId(rs.getLong("ID_MEDICO"));
+        a.setProcedimentoId(rs.getLong("ID_PROCEDIMENTO"));
+        a.setDataHora(rs.getTimestamp("DATA_HORA").toLocalDateTime());
+        a.setStatus(rs.getString("STATUS"));
         return a;
     };
 
     public void save(Agendamento a) {
-        String sql = "INSERT INTO agendamentos (paciente_id, medico_id, procedimento_id, data_hora) VALUES (?, ?, ?, ?)";
+
+        String sql = """
+        INSERT INTO agendamentos 
+        (ID_PACIENTE, ID_MEDICO, ID_PROCEDIMENTO, DATA_HORA, STATUS)
+        VALUES (?, ?, ?, ?, ?)
+    """;
 
         jdbcTemplate.update(sql,
                 a.getPacienteId(),
                 a.getMedicoId(),
                 a.getProcedimentoId(),
-                Timestamp.valueOf(a.getDataHora())
+                java.sql.Timestamp.valueOf(a.getDataHora()),
+                a.getStatus()
         );
     }
 
@@ -43,8 +50,20 @@ public class AgendamentoRepository {
     }
 
     public boolean existsByMedicoAndHorario(Long medicoId, Timestamp dataHora) {
-        String sql = "SELECT COUNT(*) FROM agendamentos WHERE medico_id = ? AND data_hora = ?";
-        Integer count = jdbcTemplate.queryForObject(sql, Integer.class, medicoId, dataHora);
+
+        String sql = """
+        SELECT COUNT(*) 
+        FROM agendamentos 
+        WHERE ID_MEDICO = ? AND DATA_HORA = ?
+    """;
+
+        Integer count = jdbcTemplate.queryForObject(
+                sql,
+                Integer.class,
+                medicoId,
+                dataHora
+        );
+
         return count != null && count > 0;
     }
 }
