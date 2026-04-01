@@ -27,8 +27,15 @@ public class PacienteRepository {
     };
 
     public void save(Paciente p) {
-        String sql = "INSERT INTO pacientes (nome, peso, altura, imc) VALUES (?, ?, ?, ?)";
-        jdbcTemplate.update(sql, p.getNome(), p.getPeso(), p.getAltura(), p.getImc());
+        String sql = "INSERT INTO pacientes (nome, cpf, peso, altura, imc) VALUES (?, ?, ?, ?, ?)";
+
+        jdbcTemplate.update(sql,
+                p.getNome(),
+                p.getCpf(),
+                p.getPeso(),
+                p.getAltura(),
+                p.getImc()
+        );
     }
 
     public List<Paciente> findAll() {
