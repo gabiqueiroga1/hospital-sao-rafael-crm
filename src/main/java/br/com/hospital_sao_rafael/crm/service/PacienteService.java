@@ -22,6 +22,14 @@ public class PacienteService {
             throw new ValidationException("Nome é obrigatório");
         }
 
+        if (p.getCpf() == null || p.getCpf().isBlank()) {
+            throw new ValidationException("CPF é obrigatório");
+        }
+
+        if (repository.existsByCpf(p.getCpf())) {
+            throw new ValidationException("CPF já cadastrado");
+        }
+
         p.calcularIMC();
 
         repository.save(p);

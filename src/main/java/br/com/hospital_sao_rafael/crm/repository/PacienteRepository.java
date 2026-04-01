@@ -38,6 +38,12 @@ public class PacienteRepository {
         );
     }
 
+    public boolean existsByCpf(String cpf) {
+        String sql = "SELECT COUNT(*) FROM pacientes WHERE cpf = ?";
+        Integer count = jdbcTemplate.queryForObject(sql, Integer.class, cpf);
+        return count != null && count > 0;
+    }
+
     public List<Paciente> findAll() {
         return jdbcTemplate.query("SELECT * FROM pacientes", rowMapper);
     }
