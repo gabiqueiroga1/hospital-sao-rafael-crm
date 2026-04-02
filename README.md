@@ -99,7 +99,7 @@ server.port=8080
 
 Este projeto foi desenvolvido com foco acadêmico, aplicando conceitos de arquitetura em camadas e Domain Driven Design (DDD) de forma simplificada.
 
-A solução permite o gerenciamento de pacientes e agendamentos médicos, integrando uma API REST com banco de dados Oracle utilizando JDBC puro, sem o uso de frameworks ORM.
+A solução permite o gerenciamento de pacientes e agendamentos médicos, integrando uma API REST com banco de dados Oracle utilizando JDBC.
 
 ---
 
