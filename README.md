@@ -22,4 +22,20 @@ O sistema permite o gerenciamento de **pacientes** e **agendamentos médicos**, 
 
 ## 🧱 Arquitetura do Projeto
 
-src/main/java/br/com/hospital_sao_rafael/crm/
+```
+
+├── controller    → API REST (entrada de dados)
+├── service       → regras de negócio
+├── repository    → acesso ao banco (JDBC)
+├── domain        → entidades do sistema
+├── exception     → exceções customizadas
+├── config        → configurações (JdbcTemplate)
+└── CrmApplication.java
+
+```
+
+
+
+
+
+
