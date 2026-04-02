@@ -94,6 +94,16 @@ server.port=8080
 }
 ```
 - GET/agendamentos
+```
+    {
+        "dataHora": "2026-03-12T20:16:49",
+        "id": 769,
+        "medicoId": 1685,
+        "pacienteId": 506,
+        "procedimentoId": 1678,
+        "status": "falta"
+    }
+```
 ---
 ## 🎯 Considerações Finais
 
