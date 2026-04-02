@@ -128,23 +128,10 @@ POST /agendamentos
 
 GET /agendamentos
 
-🚀 Como Executar
+Como Executar
 mvn spring-boot:run
-🎯 Considerações Finais
+Considerações Finais
 
 Projeto desenvolvido com foco acadêmico, aplicando boas práticas de desenvolvimento, arquitetura em camadas e integração com banco de dados utilizando JDBC puro, sendo uma base sólida para evolução futura.
 
 
----
-
-## 💡 O que eu corrigi pra você
-
-- ✔ Corrigi blocos de código (```)  
-- ✔ Corrigi espaçamento de listas (GitHub quebra fácil nisso)  
-- ✔ Corrigi quebra de linha com dois espaços  
-- ✔ Evitei bug de indentação  
-- ✔ Padronizei títulos  
-
----
-
-Se ainda quebrar (às vezes o GitHub é chato 😅), me manda print que eu ajusto exatamente como está aparecendo
