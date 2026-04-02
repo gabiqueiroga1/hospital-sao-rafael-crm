@@ -94,10 +94,15 @@ server.port=8080
 }
 ```
 - GET/agendamentos
-
-## 🎯 Considerações Finais
-Este projeto consiste no desenvolvimento de um **CRM (Customer Relationship Management) para a área da saúde**, utilizando **Java com Spring Boot** e integração com **banco de dados Oracle via JDBC**.
 ---
+## 🎯 Considerações Finais
+
+Este projeto foi desenvolvido com foco acadêmico, aplicando conceitos de arquitetura em camadas e Domain Driven Design (DDD) de forma simplificada.
+
+A solução permite o gerenciamento de pacientes e agendamentos médicos, integrando uma API REST com banco de dados Oracle utilizando JDBC puro, sem o uso de frameworks ORM.
+
+---
+
 ## 👥 Integrantes do Grupo
 
 - Rafaela Heer Robinson - RM 560249
