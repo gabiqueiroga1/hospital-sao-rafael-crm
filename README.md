@@ -96,7 +96,7 @@ server.port=8080
 - GET/agendamentos
 
 ## 🎯 Considerações Finais
-Projeto desenvolvido com foco acadêmico, aplicando boas práticas de desenvolvimento, arquitetura em camadas e integração com banco de dados utilizando JDBC puro, sendo uma base sólida para evolução futura.
+Este projeto consiste no desenvolvimento de um **CRM (Customer Relationship Management) para a área da saúde**, utilizando **Java com Spring Boot** e integração com **banco de dados Oracle via JDBC**.
 ---
 ## 👥 Integrantes do Grupo
 
