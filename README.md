@@ -23,11 +23,3 @@ O sistema permite o gerenciamento de **pacientes** e **agendamentos médicos**, 
 ## 🧱 Arquitetura do Projeto
 
 src/main/java/br/com/hospital_sao_rafael/crm/
-
-├── controller
-├── service
-├── repository
-├── domain
-├── exception
-├── config
-└── CrmApplication.java
