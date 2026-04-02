@@ -8,18 +8,6 @@ A aplicação foi estruturada com base em conceitos de **Domain Driven Design (D
 
 O sistema permite o gerenciamento de **pacientes** e **agendamentos médicos**, aplicando regras reais de negócio.
 
----
-
-## 👥 Integrantes do Grupo
-
-- Rafaela Heer Robinson - RM 560249
-- Lucas Alves Piereti - RM 559533
-- Julia Hadja Kfouri Nunes - RM 559410
-- Maria Eduarda Ferrés - RM 560418
-- Gabriela Queiroga Cocuzza da Silva - RM 560035
-
----
-
 ## 🧱 Arquitetura do Projeto
 
 ```
@@ -109,7 +97,14 @@ server.port=8080
 
 ## 🎯 Considerações Finais
 Projeto desenvolvido com foco acadêmico, aplicando boas práticas de desenvolvimento, arquitetura em camadas e integração com banco de dados utilizando JDBC puro, sendo uma base sólida para evolução futura.
+---
+## 👥 Integrantes do Grupo
 
+- Rafaela Heer Robinson - RM 560249
+- Lucas Alves Piereti - RM 559533
+- Julia Hadja Kfouri Nunes - RM 559410
+- Maria Eduarda Ferrés - RM 560418
+- Gabriela Queiroga Cocuzza da Silva - RM 560035
 
 
 
