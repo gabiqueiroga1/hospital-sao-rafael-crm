@@ -1,4 +1,4 @@
-# 🏥 CRM Hospitalar - Spring Boot + JDBC
+# 🏥 CRM Hospitalar - Hospital São Rafael
 
 ## 📌 Descrição do Projeto
 
@@ -33,6 +33,90 @@ O sistema permite o gerenciamento de **pacientes** e **agendamentos médicos**, 
 └── CrmApplication.java
 
 ```
+
+---
+
+## ⚙️ Tecnologias Utilizadas
+
+- Java 17+ / 21
+- Spring Boot
+- JDBC Template
+- Oracle Database
+- Maven
+
+---
+
+## 🗄️ Integração com Banco de Dados
+```
+properties
+spring.datasource.url=jdbc:oracle:thin:@localhost:1521:XE
+spring.datasource.username=SEU_USUARIO
+spring.datasource.password=SUA_SENHA
+spring.datasource.driver-class-name=oracle.jdbc.OracleDriver
+
+server.port=8080
+```
+---
+## 📦 Entidades Principais
+## 👤 Paciente
+
+- id
+- nome
+- cpf
+- peso
+- altura
+- imc
+## 📅 Agendamento
+
+- id
+- pacienteId
+- medicoId
+- procedimentoId
+- dataHora
+- status
+
+## Regras de Negócio
+
+- Não permitir agendamento no passado
+- Não permitir conflito de horário para o mesmo médico
+- Cpf não pode ser duplicado
+- Paciente e médico são obrigatórios
+---
+## Endpoints da API
+## Pacientes
+- POST/pacientes
+```
+{
+  "nome": "Gabriela",
+  "cpf": "12345678900",
+  "peso": 60,
+  "altura": 1.65
+}
+```
+- GET/pacientes
+---
+
+- POST/agendamentos
+```
+{
+  "pacienteId": 1,
+  "medicoId": 1,
+  "procedimentoId": 1,
+  "dataHora": "2026-04-10T14:00:00"
+}
+```
+- GET/agendamentos
+
+## 🎯 Considerações Finais
+Projeto desenvolvido com foco acadêmico, aplicando boas práticas de desenvolvimento, arquitetura em camadas e integração com banco de dados utilizando JDBC puro, sendo uma base sólida para evolução futura.
+
+
+
+
+
+
+
+
 
 
 
