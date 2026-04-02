@@ -18,16 +18,17 @@ public class PacienteRepository {
 
     private RowMapper<Paciente> rowMapper = (rs, rowNum) -> {
         Paciente p = new Paciente();
-        p.setId(rs.getLong("id"));
-        p.setNome(rs.getString("nome"));
-        p.setPeso(rs.getDouble("peso"));
-        p.setAltura(rs.getDouble("altura"));
-        p.setImc(rs.getDouble("imc"));
+        p.setId(rs.getLong("ID_PACIENTE"));
+        p.setNome(rs.getString("NOME"));
+        p.setCpf(rs.getString("CPF"));
+        p.setPeso(rs.getDouble("PESO"));
+        p.setAltura(rs.getDouble("ALTURA"));
+        p.setImc(rs.getDouble("IMC"));
         return p;
     };
 
     public void save(Paciente p) {
-        String sql = "INSERT INTO pacientes (nome, cpf, peso, altura, imc) VALUES (?, ?, ?, ?, ?)";
+        String sql = "INSERT INTO pacientes (NOME, CPF, PESO, ALTURA, IMC) VALUES (?, ?, ?, ?, ?)";
 
         jdbcTemplate.update(sql,
                 p.getNome(),
@@ -39,7 +40,7 @@ public class PacienteRepository {
     }
 
     public boolean existsByCpf(String cpf) {
-        String sql = "SELECT COUNT(*) FROM pacientes WHERE cpf = ?";
+        String sql = "SELECT COUNT(*) FROM pacientes WHERE CPF = ?";
         Integer count = jdbcTemplate.queryForObject(sql, Integer.class, cpf);
         return count != null && count > 0;
     }
