@@ -75,33 +75,43 @@ server.port=8080
 - POST/pacientes
 ```
 {
-  "nome": "Gabriela",
-  "cpf": "12345678900",
-  "peso": 60,
-  "altura": 1.65
+  "nome": "João",
+  "cpf": "12675678932",
+  "peso": 70.0,
+  "altura": 1.80
 }
 ```
 - GET/pacientes
+```
+    {
+        "altura": 1.8,
+        "cpf": "12675678932",
+        "id": 1025,
+        "imc": 21.6,
+        "nome": "João",
+        "peso": 70.0
+    }
+```
 ---
 ## Agendamentos
 - POST/agendamentos
 ```
 {
-  "pacienteId": 1,
-  "medicoId": 1,
-  "procedimentoId": 1,
-  "dataHora": "2026-04-10T14:00:00"
+  "pacienteId": 273,
+  "medicoId": 1866,
+  "procedimentoId": 1001,
+  "dataHora": "2026-04-10T12:00:00"
 }
 ```
 - GET/agendamentos
 ```
-    {
-        "dataHora": "2026-03-12T20:16:49",
-        "id": 769,
-        "medicoId": 1685,
-        "pacienteId": 506,
-        "procedimentoId": 1678,
-        "status": "falta"
+       {
+        "dataHora": "2026-04-10T12:00:00",
+        "id": 1023,
+        "medicoId": 1866,
+        "pacienteId": 273,
+        "procedimentoId": 1001,
+        "status": "AGENDADO"
     }
 ```
 ---
