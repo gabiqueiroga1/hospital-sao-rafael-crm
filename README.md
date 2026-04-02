@@ -1,19 +1,28 @@
-🏥 CRM Hospitalar - Spring Boot + JDBC
-📌 Descrição do Projeto
+# 🏥 CRM Hospitalar - Spring Boot + JDBC
 
-Este projeto consiste no desenvolvimento de um CRM (Customer Relationship Management) para a área da saúde, utilizando Java com Spring Boot e integração com banco de dados Oracle via JDBC.
+## 📌 Descrição do Projeto
 
-A aplicação foi estruturada com base em conceitos de Domain Driven Design (DDD) simplificado, com foco em organização, clareza e separação de responsabilidades.
+Este projeto consiste no desenvolvimento de um **CRM (Customer Relationship Management) para a área da saúde**, utilizando **Java com Spring Boot** e integração com **banco de dados Oracle via JDBC**.
 
-O sistema permite o gerenciamento de pacientes e agendamentos médicos, aplicando regras reais de negócio.
+A aplicação foi estruturada com base em conceitos de **Domain Driven Design (DDD) simplificado**, com foco em organização, clareza e separação de responsabilidades.
 
-👥 Integrantes do Grupo
-Rafaela Heer Robinson - RM 560249
-Lucas Alves Piereti - RM 559533
-Julia Hadja Kfouri Nunes - RM 559410
-Maria Eduarda Ferrés - RM 560418
-Gabriela Queiroga Cocuzza da Silva - RM 560035
-🧱 Arquitetura do Projeto
+O sistema permite o gerenciamento de **pacientes** e **agendamentos médicos**, aplicando regras reais de negócio.
+
+---
+
+## 👥 Integrantes do Grupo
+
+- Rafaela Heer Robinson - RM 560249  
+- Lucas Alves Piereti - RM 559533  
+- Julia Hadja Kfouri Nunes - RM 559410  
+- Maria Eduarda Ferrés - RM 560418  
+- Gabriela Queiroga Cocuzza da Silva - RM 560035  
+
+---
+
+## 🧱 Arquitetura do Projeto
+
+
 src/main/java/br/com/hospital_sao_rafael/crm/
 
 ├── controller
@@ -23,20 +32,32 @@ src/main/java/br/com/hospital_sao_rafael/crm/
 ├── exception
 ├── config
 └── CrmApplication.java
-🔹 Responsabilidade de cada camada
-Controller: recebe requisições HTTP
-Service: aplica regras de negócio
-Repository: executa queries no banco via JDBC
-Domain: representa entidades
-Exception: trata erros
-Config: configura infraestrutura
-⚙️ Tecnologias Utilizadas
-Java 17+ / 21
-Spring Boot
-JDBC Template
-Oracle Database
-Maven
-🗄️ Integração com Banco de Dados
+
+
+### 🔹 Responsabilidade de cada camada
+
+- **Controller**: recebe requisições HTTP  
+- **Service**: aplica regras de negócio  
+- **Repository**: executa queries no banco via JDBC  
+- **Domain**: representa entidades  
+- **Exception**: trata erros  
+- **Config**: configura infraestrutura  
+
+---
+
+## ⚙️ Tecnologias Utilizadas
+
+- Java 17+ / 21  
+- Spring Boot  
+- JDBC Template  
+- Oracle Database  
+- Maven  
+
+---
+
+## 🗄️ Integração com Banco de Dados
+
+```properties
 spring.datasource.url=jdbc:oracle:thin:@localhost:1521:XE
 spring.datasource.username=SEU_USUARIO
 spring.datasource.password=SUA_SENHA
@@ -112,3 +133,18 @@ mvn spring-boot:run
 🎯 Considerações Finais
 
 Projeto desenvolvido com foco acadêmico, aplicando boas práticas de desenvolvimento, arquitetura em camadas e integração com banco de dados utilizando JDBC puro, sendo uma base sólida para evolução futura.
+
+
+---
+
+## 💡 O que eu corrigi pra você
+
+- ✔ Corrigi blocos de código (```)  
+- ✔ Corrigi espaçamento de listas (GitHub quebra fácil nisso)  
+- ✔ Corrigi quebra de linha com dois espaços  
+- ✔ Evitei bug de indentação  
+- ✔ Padronizei títulos  
+
+---
+
+Se ainda quebrar (às vezes o GitHub é chato 😅), me manda print que eu ajusto exatamente como está aparecendo
