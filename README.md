@@ -48,20 +48,20 @@ server.port=8080
 ## 📦 Entidades Principais
 ## 👤 Paciente
 
-- id
-- nome
-- cpf
-- peso
-- altura
-- imc
+- ID_PACIENTE
+- NOME
+- CPF
+- PESO
+- ALTURA
+- IMC
 ## 📅 Agendamento
 
-- id
-- pacienteId
-- medicoId
-- procedimentoId
-- dataHora
-- status
+- ID_AGENDAMENTO
+- ID_PACIENTE
+- ID_MEDICO
+- ID_PROCEDIMENTO
+- DATA_HORA
+- STATUS
 
 ## Regras de Negócio
 
