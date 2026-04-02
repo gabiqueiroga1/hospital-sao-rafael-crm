@@ -95,7 +95,7 @@ server.port=8080
 ```
 - GET/pacientes
 ---
-
+## Agendamentos
 - POST/agendamentos
 ```
 {
